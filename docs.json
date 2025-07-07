@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "WorkflowMax API",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -42,8 +42,8 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "Help Center",
+          "href": "https://support.workflowmax.com/hc/en-us",
           "icon": "book-open-cover"
         },
         {
@@ -53,7 +53,7 @@
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://workflowmax.com/blog",
           "icon": "newspaper"
         }
       ]
