@@ -13,6 +13,16 @@
       {
         "tab": "API Reference",
         "openapi": "api-reference/openapi2.yaml"
+      },
+      {
+        "tab": "Endpoints",
+        "groups":[
+          {"group": "Category",
+          "pages":[
+            "api-reference/endpoint_test/Category/get-job-categories"
+          ]
+          }
+        ]
       }
     ],
     "global": {
