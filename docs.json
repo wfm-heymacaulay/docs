@@ -36,7 +36,7 @@
       },
       {
         "tab": "API Reference",
-        "openapi": "api-reference/Jun-18-updated.yaml"
+        "openapi": "api-reference/openapi2.yaml"
       }
     ],
     "global": {
