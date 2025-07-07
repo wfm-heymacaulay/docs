@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "WorkflowMax",
+  "theme": "mint",
   "name": "WorkflowMax API",
   "colors": {
     "primary": "#16A34A",
