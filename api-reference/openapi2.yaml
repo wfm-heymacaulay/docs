@@ -9,7 +9,7 @@ servers:
 paths:
   /v2/job-categories:
     get:
-      summary: ''
+      summary: 'Get Job Categories'
       operationId: getV2JobCategories
       description: 'This is newly added description for job categories'
       parameters:
