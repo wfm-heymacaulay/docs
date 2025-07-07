@@ -36,8 +36,8 @@
     }
   },
   "logo": {
-    "light": "/logo/WFMlogo_MAX_Light.svg",
-    "dark": "/logo/WFMlogo_MAX_Dark.svg"
+    "light": "/logo/WFMlogo.svg",
+    "dark": "/logo/WFMlogo.svg"
   },
   "navbar": {
     "links": [
