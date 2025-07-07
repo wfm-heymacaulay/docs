@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "WorkflowMax",
   "name": "WorkflowMax API",
   "colors": {
     "primary": "#16A34A",
@@ -36,14 +36,14 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/WFMlogo_MAX_Light.svg",
+    "dark": "/logo/WFMlogo_MAX_Dark.svg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@workflowmax.com"
       }
     ],
     "primary": {
