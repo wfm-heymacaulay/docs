@@ -11,7 +11,7 @@ paths:
     get:
       summary: ''
       operationId: getV2JobCategories
-      description: ''
+      description: 'This is newly added description for job categories'
       parameters:
         -
           in: header
