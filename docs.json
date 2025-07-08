@@ -17,6 +17,11 @@
       {
         "tab": "Endpoints",
         "groups":[
+          {"group": "Ahthorization",
+          "pages":[
+            "index"
+          ]
+          }
           {"group": "Category",
           "pages":[
             "api-reference/endpoint_test/Category/get-job-categories"
