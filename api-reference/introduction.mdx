@@ -1,6 +1,6 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: "API authentication"
+description: "Example section for showcasing API endpoints"
 ---
 
 <Note>
@@ -8,26 +8,147 @@ description: 'Example section for showcasing API endpoints'
   this section by removing the api-reference folder.
 </Note>
 
-## Welcome
+## **Before you get started**
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+Before you can start using OAuth with , you will need to have:
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+- a developer/user account
+- a developer application – this can be created [<u>here</u>](https://developer.workflowmax2.com/)
+- an account to integrate with your developer application.\*
 
-## Authentication
+_\*You must have full access to the “Authorize 3rd Party Full Access” privilege to integrate with a account._
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+## **How it works**
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+supports the [<u>OAuth 2.0 Authorization Code grant type</u>](https://developer.okta.com/blog/2018/04/10/oauth-authorization-code-grant-type), which can be broken down into five basic steps:
+
+1. Your application opens a browser window to send the user to the OAuth 2.0 server.
+2. The user reviews the requested permissions and grants the application access.
+3. The user is redirected back to the application with an authorization code in the query string.
+4. The application sends a request to the OAuth 2.0 server to exchange the authorization code for an access token.
+5. Make calls against the API.
+
+## **Getting OAuth 2.0 tokens**
+
+### **Step 1: Create the authorization URL and direct the user to 's OAuth 2.0 server**
+
+When sending a user to 's OAuth 2.0 server, the first step is creating the authorization URL. This will identify your application and define the resources (scopes) it's requesting access to on behalf of the user. 
+
+Your application should direct users to the following URL: \
+[_https://oauth.workflowmax.com/oauth/authorize?response_type=code&client_id=&redirect_uri=&scope=_](https://oauth.workflowmax.com/oauth/authorize?response_type=code&client_id={YOURCLIENTID}&redirect_uri={YOURREDIRECTURI}&scope=)\_ openid profile email workflowmax offline_access&state=YOURSTATE&prompt=consent\_
+
+The following values should be passed in as parameters:
+
+| response_type | code                                                                                                                   |
+| :------------ | :--------------------------------------------------------------------------------------------------------------------- |
+| client_id     | Issued when you created your developer application                                                                     |
+| scope         | Permissions to define the data that this application will access <br />openid email profile workflowmax offline_access |
+| redirect_uri  | The URL on the server to redirect back to (this must be HTTPS)                                                         |
+| _state_       | _random string you can generate to prevent XSRF_                                                                       |
+| prompt        | consent                                                                                                                |
+
+_Optional parameter - does not have to be included but it is recommended for security purposes_
+
+### \*\*\\
+
+Step 2: Prompts user for consent\*\*
+
+displays a consent window to the user showing the name of your application and a short description of the API services it's requesting permission to access. The user can then grant access to your app.
+
+If any errors occur or the user denies the request, we redirect back to your redirect_uri with an error parameter.
+
+Your application doesn't do anything at this stage. Once access is granted, the OAuth 2.0 server will send a request to the callback URI defined in the authorization URL.
+
+### **Step 3: Handle the OAuth 2.0 server response**
+
+When the user has completed the consent prompt from Step 2, the OAuth 2.0 server sends a GET request to the redirect URI specified in your authentication URL. If there are no issues and the user approves the access request, the request to the redirect URI will be returned with a code query parameter attached.
+
+If the user doesn't grant access, the request to the redirect URI will be returned with a query parameter: 
+
+| error             | access_denied                                                 |
+| :---------------- | :------------------------------------------------------------ |
+| error_description | The resource owner or authorization server denied the request |
+
+### \*\*\\
+
+Step 4: Exchange authorization code for tokens\*\*
+
+After your application receives an authorization code from the OAuth 2.0 server, it can exchange that code for an access and refresh token.
+
+To do this you will need to make a POST request to our token endpoint:
+
+[_https://oauth.workflowmax.com/oauth/token_](https://oauth.workflowmax.com/oauth/token)
+
+The request body will need to contain the following:
+
+| grant_type    | authorization_code                                           |
+| :------------ | :----------------------------------------------------------- |
+| code          | The authorization code you received in the callback          |
+| redirect_uri  | The same redirect URI that was used when requesting the code |
+| client_id     | The app Client ID                                            |
+| client_secret | The app’s Client Secret                                      |
+
+Please note this is different to the WorkflowMax by Xero API, which passes this information via headers.
+
+The token endpoint will verify all the parameters in the request, ensuring the code hasn’t expired and that the client ID and secret match.
+
+It will contain the following parameters:
+
+| access_token  | The token used to call the API.                                                                                          |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------- |
+| expires_in    | The amount of seconds until the access token expires.                                                                    |
+| token_type    | Type of the token returned <br />Bearer                                                                                  |
+| refresh_token | The token used to refresh the access token once it has expired (only returned if the offline_access scope is requested). |
+
+All tokens received have an associated expiry time. Access tokens and refresh tokens can be exchanged prior to expiry.
+
+Token expiry times:
+
+- access_token: 30 minutes
+- refresh_token: 60 days.
+
+The access token is a JWT, which can be [<u>decoded</u>](https://jwt.io/) to retrieve the authentication organisation's Org ID, which will be required to make API calls (step 5). If your JWT does not contain an Organisation ID, please check that you have completed step 4 correctly by passing the parameters in the body (not as headers).
+
+### **Step 5: Call the API**
+
+Make calls against the API by simply adding the following headers to your request:
+
+| authorization | "Bearer " \+ access_token |
+| :------------ | :------------------------ |
+| account_id    | organisation ID           |
+
+To view the API contract documentation, please click [<u>here</u>](https://app.swaggerhub.com/apis/WorkflowMax-BlueRock/WorkflowMax-BlueRock-OpenAPI3/0.1).
+
+## **Refreshing access and refresh tokens**
+
+Access tokens expire after 30 minutes. Your application can refresh an access token without user interaction by using a refresh token. You get a refresh token by requesting the offline_access scope during the initial user authorization. Refresh tokens expire after 60 days.
+
+To refresh your access token you need to POST to the token endpoint:
+
+[_https://oauth.workflowmax.com/oauth/token_](https://oauth.workflowmax.com/oauth/token)
+
+The request will require an authorization header containing your app’s client_id and client_secret
+
+The request body will need to contain the grant type and refresh token.
+
+| grant_type    | refresh_token           |
+| :------------ | :---------------------- |
+| refresh_token | Your refresh token      |
+| client_id     | The app Client ID       |
+| client_secret | The app’s Client Secret |
+| scope         | Same scope used         |
+
+The response will contain a new access token and refresh token. You must save both tokens in order to maintain API access.
+
+## **Recently viewed articles**
+
+- [Add or edit a staff member](https://support.workflowmax.com/hc/en-us/articles/24773535682969-Add-or-edit-a-staff-member)
+- [What's new](https://support.workflowmax.com/hc/en-us/articles/25686264504985-What-s-new)
+
+## **Related articles**
+
+- [Release notes](https://support.workflowmax.com/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBlnL49cFzoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBkY2P4mGjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSI0L2hjL2VuLXVzL2FydGljbGVzLzI1Njg2MzA2Njc4NTUzLVJlbGVhc2Utbm90ZXMGOwhUOglyYW5raQY%3D--348540897ea39afd2389953a86e112d6a633897a)
+- [Contact support](https://support.workflowmax.com/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJmYQd2vFzoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBkY2P4mGjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSI2L2hjL2VuLXVzL2FydGljbGVzLzI2MDQ0MDk4Nzc5Mjg5LUNvbnRhY3Qtc3VwcG9ydAY7CFQ6CXJhbmtpBw%3D%3D--3e4e3dcdaa886170012a426fb4450e02043a8be9)
+- [MFA setup and use for WorkflowMax](https://support.workflowmax.com/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBkQD9kqGjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBkY2P4mGjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJIL2hjL2VuLXVzL2FydGljbGVzLzI4NzcxMzMyNTkxNjQxLU1GQS1zZXR1cC1hbmQtdXNlLWZvci1Xb3JrZmxvd01heAY7CFQ6CXJhbmtpCA%3D%3D--af911d6f31785cf412819bb7f626cd599609611a)
+- [Welcome\!](https://support.workflowmax.com/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCJnFTX9cFzoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBkY2P4mGjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSIuL2hjL2VuLXVzL2FydGljbGVzLzI1Njg2MDQwMjMzMzY5LVdlbGNvbWUGOwhUOglyYW5raQk%3D--8eba2eac6dd44da2e943b0f951acb9977d7ec6e5)
+- [Custom report troubleshooting](https://support.workflowmax.com/hc/en-us/related/click?data=BAh7CjobZGVzdGluYXRpb25fYXJ0aWNsZV9pZGwrCBnkCu3vHjoYcmVmZXJyZXJfYXJ0aWNsZV9pZGwrCBkY2P4mGjoLbG9jYWxlSSIKZW4tdXMGOgZFVDoIdXJsSSJEL2hjL2VuLXVzL2FydGljbGVzLzM0MDE1ODIyOTMwOTY5LUN1c3RvbS1yZXBvcnQtdHJvdWJsZXNob290aW5nBjsIVDoJcmFua2kK--199607c702d995bc5ddf2f09853227cf503af28e)

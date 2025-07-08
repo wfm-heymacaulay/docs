@@ -19,7 +19,7 @@
         "groups":[
           {"group": "Ahthorization",
           "pages":[
-            "index"
+            "introduction"
           ]
           },
           {"group": "Category",
