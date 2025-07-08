@@ -17,7 +17,7 @@
       {
         "tab": "Endpoints",
         "groups":[
-          {"group": "Ahthorization",
+          {"group": "Authorization",
           "pages":[
             "api-reference/introduction"
           ]
