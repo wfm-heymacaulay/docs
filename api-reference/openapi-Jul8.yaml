@@ -1,0 +1,123 @@
+openapi: 3.1.0
+info:
+  title: 'WorkflowMax API v2'
+  description: 'API documentation for WorkflowMax API v2 endpoints.'
+  license:
+    name: MIT
+    identifier: MIT
+  version: 1.0.0
+servers:
+  -
+    url: 'https://localhost/v2'
+    description: 'API server'
+paths:
+  /v2/job-categories:
+    get:
+      tags:
+        - Category
+      summary: 'Get Job Categories'
+      description: "The 'Get Job Categories' section allows users to retrieve a list of job categories associated with a specific account. By accessing this information, users can efficiently organize and categorize different job types within their system. This API section enables users to streamline their workflow by providing essential information about job categories for effective management."
+      operationId: 4bb2e2e66d20f20d787892b85e47698c
+      parameters:
+        -
+          $ref: '#/components/parameters/AccountIdHeader'
+        -
+          $ref: '#/components/parameters/StatusParam'
+        -
+          $ref: '#/components/parameters/UpdatedSinceParam'
+        -
+          $ref: '#/components/parameters/PageParam'
+        -
+          $ref: '#/components/parameters/PageSizeParam'
+      responses:
+        '200':
+          description: 'Successful response'
+          content:
+            application/json:
+              schema:
+                properties:
+                  data: { type: array, items: { $ref: '#/components/schemas/JobCategorySchema' } }
+                  total: { description: 'The total number of job categories.', type: integer }
+                type: object
+components:
+  schemas:
+    JobCategorySchema:
+      properties:
+        uuid:
+          description: 'The unique identifier for the job category.'
+          type: string
+        name:
+          description: 'The name of the job category.'
+          type: string
+        description:
+          description: 'A brief description of the job category.'
+          type: string
+        incomeAccount:
+          description: 'The income account associated with the job category.'
+          type: string
+        costOfSaleAccount:
+          description: 'The cost of sale account associated with the job category.'
+          type: string
+        createdAt:
+          description: 'The date and time when the job category was created.'
+          type: string
+        updatedAt:
+          description: 'The date and time when the job category was last updated.'
+          type: string
+        deletedAt:
+          description: 'The date and time when the job category was deleted.'
+          type: string
+      type: object
+  parameters:
+    AccountIdHeader:
+      name: account-id
+      in: header
+      description: 'The account ID associated with the API request.'
+      required: true
+      schema:
+        type: string
+        example: '{YOU_ACCOUNT_ID}'
+    PageParam:
+      name: page
+      in: query
+      description: 'The page number (min: 1).'
+      required: true
+      schema:
+        type: integer
+        example: 1
+    PageSizeParam:
+      name: pagesize
+      in: query
+      description: 'The number of items per page (min: 1, max: 10000).'
+      required: false
+      schema:
+        type: integer
+        example: 100
+    StatusParam:
+      name: status
+      in: query
+      description: 'Comma separated list of statuses. Allowed values: active, deleted.'
+      required: false
+      schema:
+        type: string
+        example: active
+    UpdatedSinceParam:
+      name: updatedsince
+      in: query
+      description: 'Filter by updated date (YYYY-MM-DD).'
+      required: false
+      schema:
+        type: string
+        example: '2024-01-01'
+  securitySchemes:
+    BearerAuth:
+      type: http
+      bearerFormat: JWT
+      scheme: bearer
+security:
+  -
+    BearerAuth: []
+tags:
+  -
+    name: Category
+    description: 'All about categories'
