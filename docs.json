@@ -16,6 +16,7 @@
       },
       {
         "tab": "Endpoints",
+        "openapi": "api-reference/openapi_spec_test.yaml",
         "groups":[
           {"group": "Ahthorization",
           "pages":[
