@@ -26,6 +26,12 @@
           "pages":[
             "api-reference/endpoint_test/Category/get-job-categories"
           ]
+          },
+          {"group": "Client",
+          "pages":[
+            "api-reference/endpoint_test/Client/get-v2clients",
+            "api-reference/endpoint_test/Client/get-v2clients-1"
+          ]
           }
         ]
       }
