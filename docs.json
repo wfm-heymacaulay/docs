@@ -20,7 +20,7 @@
       },
       {
         "tab": "Endpoints",
-        "openapi": "api-reference/openapi_spec_test.yaml",
+        "openapi": "api-reference/openapi_Jul8.yaml",
         "groups":[
           {"group": "Ahthorization",
           "pages":[
@@ -30,12 +30,6 @@
           {"group": "Category",
           "pages":[
             "api-reference/endpoint_test/Category/get-job-categories"
-          ]
-          },
-          {"group": "Client",
-          "pages":[
-            "api-reference/endpoint_test/Client/get-v2clients",
-            "api-reference/endpoint_test/Client/get-v2clients-1"
           ]
           }
         ]
