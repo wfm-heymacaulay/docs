@@ -11,14 +11,6 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "API Reference",
-        "openapi": "api-reference/openapi_spec_test.yaml"
-      },
-      {
-        "tab": "API Reference - New Library",
-        "openapi": "api-reference/openapi-Jul8.yaml"
-      },
-      {
         "tab": "Endpoints",
         "openapi": "api-reference/openapi-Jul8.yaml",
         "groups":[
