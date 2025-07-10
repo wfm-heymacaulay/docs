@@ -20,7 +20,7 @@
       },
       {
         "tab": "Endpoints",
-        "openapi": "api-reference/openapi_Jul8.yaml",
+        "openapi": "api-reference/openapi-Jul8.yaml",
         "groups":[
           {"group": "Ahthorization",
           "pages":[
