@@ -3,18 +3,20 @@ info:
   title: gina-test-project
   version: 1.0.0
 paths:
-  v2/job-categories:
+  /v2/job-categories:
     get:
       tags:
         - Category
       summary: Get Job Categories
-      description:
+      description: >-
         The "Get Job Categories" section allows users to retrieve a list of job
         categories associated with a specific account. By accessing this
         information, users can efficiently organize and categorize different job
         types within their system. This API section enables users to streamline
         their workflow by providing essential information about job categories
         for effective management.
+
+
         This is newly added description for job categories
       operationId: Category_category/get-job-categories
       parameters:
@@ -96,8 +98,8 @@ paths:
                           description: The date and time when the job category was deleted.
                           example: {}
                           properties: {}
-                          required: []
-                      required: []
+                          
+                      
                   total:
                     type: integer
                     description: The total number of job categories.
@@ -404,7 +406,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: Philippines
-                            required: []
+                            
                         contacts:
                           type: array
                           description: ''
@@ -447,7 +449,7 @@ paths:
                                 type: boolean
                                 description: ''
                                 example: false
-                            required: []
+                            
                         contactDetails:
                           type: object
                           description: ''
@@ -473,7 +475,7 @@ paths:
                               type: string
                               description: ''
                               example: https://danmachi.com
-                          required: []
+                          
                         billingDetails:
                           type: object
                           description: ''
@@ -519,7 +521,7 @@ paths:
                               description: ''
                               example: {}
                               properties: {}
-                              required: []
+                              
                             taxNumbers:
                               type: array
                               description: ''
@@ -543,8 +545,8 @@ paths:
                                     type: string
                                     description: ''
                                     example: '4'
-                                required: []
-                          required: []
+                                
+                          
                         clientGroups:
                           type: array
                           description: ''
@@ -567,7 +569,7 @@ paths:
                                 type: boolean
                                 description: ''
                                 example: false
-                            required: []
+                            
                         clientRelationships:
                           type: array
                           description: ''
@@ -600,7 +602,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-31'
-                            required: []
+                            
                         notes:
                           type: array
                           description: ''
@@ -653,7 +655,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-06T07:49:54'
-                            required: []
+                            
                         documents:
                           type: array
                           description: ''
@@ -718,7 +720,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-06T07:49:54'
-                            required: []
+                            
                         customFields:
                           type: array
                           description: ''
@@ -758,7 +760,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: https://www.instagram.com/?id=1000
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -767,7 +769,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-06T04:22:07'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -979,7 +981,7 @@ paths:
                         type: string
                         description: ''
                         example: Manager
-                    required: []
+                    
                 customFields:
                   type: array
                   description: List of custom fields with values.
@@ -997,7 +999,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - name
   v2/clients/{UUID}:
@@ -1093,7 +1095,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   jobManager:
                     type: object
                     description: ''
@@ -1114,7 +1116,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   referralSource:
                     type: string
                     description: ''
@@ -1169,7 +1171,7 @@ paths:
                           type: string
                           description: ''
                           example: Philippines
-                      required: []
+                      
                   contacts:
                     type: array
                     description: ''
@@ -1212,7 +1214,7 @@ paths:
                           type: boolean
                           description: ''
                           example: false
-                      required: []
+                      
                   contactDetails:
                     type: object
                     description: ''
@@ -1238,7 +1240,7 @@ paths:
                         type: string
                         description: ''
                         example: https://danmachi.com
-                    required: []
+                    
                   billingDetails:
                     type: object
                     description: ''
@@ -1280,7 +1282,7 @@ paths:
                             type: string
                             description: ''
                             example: Business Structure - Individual
-                        required: []
+                        
                       clientType:
                         type: object
                         description: ''
@@ -1296,7 +1298,7 @@ paths:
                             type: string
                             description: ''
                             example: Type
-                        required: []
+                        
                       taxNumbers:
                         type: array
                         description: ''
@@ -1320,7 +1322,7 @@ paths:
                               type: string
                               description: ''
                               example: '4'
-                          required: []
+                          
                       balanceDate:
                         type: string
                         description: ''
@@ -1348,8 +1350,8 @@ paths:
                             type: string
                             description: ''
                             example: John Wick
-                        required: []
-                    required: []
+                        
+                    
                   clientGroups:
                     type: array
                     description: ''
@@ -1372,7 +1374,7 @@ paths:
                           type: boolean
                           description: ''
                           example: false
-                      required: []
+                      
                   clientRelationships:
                     type: array
                     description: ''
@@ -1405,7 +1407,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-31'
-                      required: []
+                      
                   notes:
                     type: array
                     description: ''
@@ -1466,7 +1468,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         comments:
                           type: array
                           description: ''
@@ -1501,7 +1503,7 @@ paths:
                                     type: string
                                     description: ''
                                     example: Pe
-                                required: []
+                                
                               comment:
                                 type: string
                                 description: ''
@@ -1514,7 +1516,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-06T05:25:56'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -1523,7 +1525,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-06T06:26:31'
-                      required: []
+                      
                   documents:
                     type: array
                     description: ''
@@ -1588,7 +1590,7 @@ paths:
                               type: string
                               description: ''
                               example: Peran
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -1597,7 +1599,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-06T06:26:31'
-                      required: []
+                      
                   customFields:
                     type: array
                     description: ''
@@ -1637,7 +1639,7 @@ paths:
                           type: string
                           description: ''
                           example: https://www.instagram.com/?id=1000
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -1767,7 +1769,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   jobManager:
                     type: object
                     description: ''
@@ -1788,7 +1790,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   referralSource:
                     type: string
                     description: ''
@@ -1843,7 +1845,7 @@ paths:
                           type: string
                           description: ''
                           example: Philippines
-                      required: []
+                      
                   contacts:
                     type: array
                     description: ''
@@ -1886,7 +1888,7 @@ paths:
                           type: boolean
                           description: ''
                           example: false
-                      required: []
+                      
                   contactDetails:
                     type: object
                     description: ''
@@ -1912,7 +1914,7 @@ paths:
                         type: string
                         description: ''
                         example: https://danmachi.com
-                    required: []
+                    
                   billingDetails:
                     type: object
                     description: ''
@@ -1954,7 +1956,7 @@ paths:
                             type: string
                             description: ''
                             example: Business Structure - Individual
-                        required: []
+                        
                       clientType:
                         type: object
                         description: ''
@@ -1970,7 +1972,7 @@ paths:
                             type: string
                             description: ''
                             example: Type
-                        required: []
+                        
                       taxNumbers:
                         type: array
                         description: ''
@@ -1994,7 +1996,7 @@ paths:
                               type: string
                               description: ''
                               example: '4'
-                          required: []
+                          
                       balanceDate:
                         type: string
                         description: ''
@@ -2022,8 +2024,8 @@ paths:
                             type: string
                             description: ''
                             example: John Wick
-                        required: []
-                    required: []
+                        
+                    
                   clientGroups:
                     type: array
                     description: ''
@@ -2046,7 +2048,7 @@ paths:
                           type: boolean
                           description: ''
                           example: false
-                      required: []
+                      
                   clientRelationships:
                     type: array
                     description: ''
@@ -2079,7 +2081,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-31'
-                      required: []
+                      
                   notes:
                     type: array
                     description: ''
@@ -2140,7 +2142,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         comments:
                           type: array
                           description: ''
@@ -2175,7 +2177,7 @@ paths:
                                     type: string
                                     description: ''
                                     example: Pe
-                                required: []
+                                
                               comment:
                                 type: string
                                 description: ''
@@ -2188,7 +2190,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-06T05:25:56'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -2197,7 +2199,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-06T06:26:31'
-                      required: []
+                      
                   documents:
                     type: array
                     description: ''
@@ -2262,7 +2264,7 @@ paths:
                               type: string
                               description: ''
                               example: Peran
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -2271,7 +2273,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-06T06:26:31'
-                      required: []
+                      
                   customFields:
                     type: array
                     description: ''
@@ -2311,7 +2313,7 @@ paths:
                           type: string
                           description: ''
                           example: https://www.instagram.com/?id=1000
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -2461,7 +2463,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - name
   /v2/clients/contacts:
@@ -2702,7 +2704,7 @@ paths:
                           type: string
                           description: ''
                           example: Manager
-                      required: []
+                      
                   customFields:
                     type: array
                     description: ''
@@ -2725,7 +2727,7 @@ paths:
                           type: string
                           description: ''
                           example: asd
-                      required: []
+                      
       requestBody:
         description: Request body
         required: true
@@ -2785,7 +2787,7 @@ paths:
                         type: string
                         description: ''
                         example: Manager
-                    required: []
+                    
                 customFields:
                   type: array
                   description: List of custom fields with values.
@@ -2803,7 +2805,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - name
     delete:
@@ -2955,7 +2957,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-03-31T07:17:55'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -3143,7 +3145,7 @@ paths:
                         type: boolean
                         description: ''
                         example: false
-                    required: []
+                    
     post:
       tags:
         - Client - Group
@@ -3293,9 +3295,9 @@ paths:
                               description: ''
                               example: {}
                               properties: {}
-                              required: []
-                          required: []
-                    required: []
+                              
+                          
+                    
     put:
       tags:
         - Client - Group
@@ -3357,7 +3359,7 @@ paths:
                         type: boolean
                         description: ''
                         example: false
-                    required: []
+                    
       requestBody:
         description: Request body
         required: true
@@ -3694,7 +3696,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         billable:
                           type: boolean
                           description: ''
@@ -3722,19 +3724,19 @@ paths:
                               type: string
                               description: ''
                               example: supplier 1
-                          required: []
+                          
                         incomeAmount:
                           type: object
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         costOfSaleAccount:
                           type: object
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         salesTax:
                           type: array
                           description: ''
@@ -3753,7 +3755,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-02-11T03:53:59'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -3921,7 +3923,7 @@ paths:
                         type: string
                         description: ''
                         example: supplier 1
-                    required: []
+                    
                   incomeAmount:
                     type: string
                     description: ''
@@ -3949,7 +3951,7 @@ paths:
                           type: number
                           description: ''
                           example: 15
-                      required: []
+                      
                   purchaseTax:
                     type: array
                     description: ''
@@ -3969,7 +3971,7 @@ paths:
                           type: number
                           description: ''
                           example: 15
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -4066,7 +4068,7 @@ paths:
                         type: string
                         description: ''
                         example: supplier 1
-                    required: []
+                    
                   incomeAmount:
                     type: string
                     description: ''
@@ -4094,7 +4096,7 @@ paths:
                           type: number
                           description: ''
                           example: 15
-                      required: []
+                      
                   purchaseTax:
                     type: array
                     description: ''
@@ -4114,7 +4116,7 @@ paths:
                           type: number
                           description: ''
                           example: 15
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -4706,8 +4708,8 @@ paths:
                                   description: ''
                                   example: {}
                                   properties: {}
-                                  required: []
-                              required: []
+                                  
+                              
                             contact:
                               type: object
                               description: ''
@@ -4724,8 +4726,8 @@ paths:
                                   description: ''
                                   example: {}
                                   properties: {}
-                                  required: []
-                              required: []
+                                  
+                              
                             supplier:
                               type: object
                               description: ''
@@ -4742,8 +4744,8 @@ paths:
                                   description: ''
                                   example: {}
                                   properties: {}
-                                  required: []
-                              required: []
+                                  
+                              
                             job:
                               type: object
                               description: ''
@@ -4760,8 +4762,8 @@ paths:
                                   description: ''
                                   example: {}
                                   properties: {}
-                                  required: []
-                              required: []
+                                  
+                              
                             lead:
                               type: object
                               description: ''
@@ -4778,8 +4780,8 @@ paths:
                                   description: ''
                                   example: {}
                                   properties: {}
-                                  required: []
-                              required: []
+                                  
+                              
                             jobTask:
                               type: object
                               description: ''
@@ -4796,8 +4798,8 @@ paths:
                                   description: ''
                                   example: {}
                                   properties: {}
-                                  required: []
-                              required: []
+                                  
+                              
                             jobCost:
                               type: object
                               description: ''
@@ -4814,8 +4816,8 @@ paths:
                                   description: ''
                                   example: {}
                                   properties: {}
-                                  required: []
-                              required: []
+                                  
+                              
                             timesheet:
                               type: object
                               description: ''
@@ -4832,8 +4834,8 @@ paths:
                                   description: ''
                                   example: {}
                                   properties: {}
-                                  required: []
-                              required: []
+                                  
+                              
                             quote:
                               type: object
                               description: ''
@@ -4850,9 +4852,9 @@ paths:
                                   description: ''
                                   example: {}
                                   properties: {}
-                                  required: []
-                              required: []
-                          required: []
+                                  
+                              
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -4865,7 +4867,7 @@ paths:
                           type: string
                           description: ''
                           example: https://www.instagram.com/{value}
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -5101,7 +5103,7 @@ paths:
                         type: string
                         description: ''
                         example: johnwick@example.com
-                    required: []
+                    
                   contact:
                     type: object
                     description: ''
@@ -5137,7 +5139,7 @@ paths:
                         type: string
                         description: ''
                         example: alice.smith@example.com
-                    required: []
+                    
                   date:
                     type: string
                     description: ''
@@ -5371,7 +5373,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 1
-                            required: []
+                            
                         tasks:
                           type: array
                           description: ''
@@ -5525,7 +5527,7 @@ paths:
                                       type: number
                                       description: ''
                                       example: 1
-                                  required: []
+                                  
                               fixedPrice:
                                 type: boolean
                                 description: ''
@@ -5557,8 +5559,8 @@ paths:
                                       description: ''
                                       example: {}
                                       properties: {}
-                                      required: []
-                                  required: []
+                                      
+                                  
                               order:
                                 type: number
                                 description: ''
@@ -5571,7 +5573,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-14T09:51:34'
-                            required: []
+                            
                         costs:
                           type: array
                           description: ''
@@ -5711,8 +5713,8 @@ paths:
                                       description: ''
                                       example: {}
                                       properties: {}
-                                      required: []
-                                  required: []
+                                      
+                                  
                               additional:
                                 type: boolean
                                 description: ''
@@ -5729,8 +5731,8 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-14T09:51:34'
-                            required: []
-                      required: []
+                            
+                      
                   notes:
                     type: array
                     description: ''
@@ -5789,7 +5791,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -5798,7 +5800,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-14T08:39:25'
-                      required: []
+                      
                   payments:
                     type: array
                     description: ''
@@ -5830,13 +5832,13 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         accountName:
                           type: object
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -5845,7 +5847,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-14T09:50:26'
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -6286,7 +6288,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         budget:
                           type: number
                           description: ''
@@ -6340,7 +6342,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         customFields:
                           type: array
                           description: ''
@@ -6372,7 +6374,7 @@ paths:
                                 type: boolean
                                 description: ''
                                 example: false
-                            required: []
+                            
                         tasks:
                           type: array
                           description: ''
@@ -6477,7 +6479,7 @@ paths:
                                       type: number
                                       description: ''
                                       example: 900
-                                  required: []
+                                  
                               customFields:
                                 type: array
                                 description: ''
@@ -6512,7 +6514,7 @@ paths:
                                       type: string
                                       description: ''
                                       example: ''
-                                  required: []
+                                  
                               createdAt:
                                 type: string
                                 description: ''
@@ -6521,7 +6523,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-03-26T03:11:39'
-                            required: []
+                            
                         costs:
                           type: array
                           description: ''
@@ -6590,7 +6592,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               type:
                                 type: string
                                 description: ''
@@ -6653,7 +6655,7 @@ paths:
                                       type: string
                                       description: ''
                                       example: asd
-                                  required: []
+                                  
                               createdAt:
                                 type: string
                                 description: ''
@@ -6662,7 +6664,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-02-19T02:24:56'
-                            required: []
+                            
                         notes:
                           type: array
                           description: ''
@@ -6699,7 +6701,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               description:
                                 type: string
                                 description: ''
@@ -6720,7 +6722,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-01-31T07:46:35'
-                            required: []
+                            
                         documents:
                           type: array
                           description: ''
@@ -6784,7 +6786,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               createdAt:
                                 type: string
                                 description: ''
@@ -6793,7 +6795,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-02-24T07:20:05'
-                            required: []
+                            
                         staffAssigned:
                           type: array
                           description: ''
@@ -6814,8 +6816,8 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
-                            required: []
+                                
+                            
                         phases:
                           type: array
                           description: ''
@@ -6846,7 +6848,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               createdAt:
                                 type: string
                                 description: ''
@@ -6855,7 +6857,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-01-27T09:06:46'
-                            required: []
+                            
                         milestones:
                           type: array
                           description: ''
@@ -6895,7 +6897,7 @@ paths:
                                 type: boolean
                                 description: ''
                                 example: false
-                            required: []
+                            
                         quotes:
                           type: array
                           description: ''
@@ -6986,7 +6988,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               budget:
                                 type: number
                                 description: ''
@@ -7039,7 +7041,7 @@ paths:
                                       type: string
                                       description: ''
                                       example: '2025-05-02'
-                                  required: []
+                                  
                               createdAt:
                                 type: string
                                 description: ''
@@ -7048,7 +7050,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-02T01:16:00'
-                            required: []
+                            
                         invoices:
                           type: array
                           description: ''
@@ -7091,7 +7093,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               date:
                                 type: string
                                 description: ''
@@ -7128,7 +7130,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-02-19T05:02:06'
-                            required: []
+                            
                         purchaseOrders:
                           type: array
                           description: ''
@@ -7167,13 +7169,13 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               billingStatus:
                                 type: object
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               amountExTax:
                                 type: number
                                 description: ''
@@ -7190,7 +7192,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-04-10T17:42:20'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -7199,7 +7201,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-07T10:14:52'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -7327,7 +7329,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - name
                 - clientUUID
@@ -7433,7 +7435,7 @@ paths:
                         type: string
                         description: ''
                         example: johndoe@example.com
-                    required: []
+                    
                   contact:
                     type: object
                     description: ''
@@ -7469,7 +7471,7 @@ paths:
                         type: string
                         description: ''
                         example: gragefoo@gmail.com
-                    required: []
+                    
                   clientContactUUID:
                     type: string
                     description: ''
@@ -7501,7 +7503,7 @@ paths:
                         type: string
                         description: ''
                         example: In Progress
-                    required: []
+                    
                   jobCategory:
                     type: object
                     description: ''
@@ -7517,7 +7519,7 @@ paths:
                         type: string
                         description: ''
                         example: job category 1
-                    required: []
+                    
                   priority:
                     type: boolean
                     description: ''
@@ -7558,7 +7560,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   jobManager:
                     type: object
                     description: ''
@@ -7579,7 +7581,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   startDate:
                     type: string
                     description: ''
@@ -7626,7 +7628,7 @@ paths:
                           type: string
                           description: ''
                           example: ''
-                      required: []
+                      
                   tasks:
                     type: array
                     description: ''
@@ -7752,7 +7754,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 900
-                            required: []
+                            
                         customFields:
                           type: array
                           description: ''
@@ -7787,7 +7789,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: ''
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -7796,7 +7798,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T01:31:27'
-                      required: []
+                      
                   costs:
                     type: array
                     description: ''
@@ -7867,7 +7869,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         type:
                           type: string
                           description: ''
@@ -7903,7 +7905,7 @@ paths:
                               type: string
                               description: ''
                               example: supplier 1
-                          required: []
+                          
                         phaseUUID:
                           type: string
                           description: ''
@@ -7942,7 +7944,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: ''
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -7951,7 +7953,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T05:16:55'
-                      required: []
+                      
                   notes:
                     type: array
                     description: ''
@@ -8018,7 +8020,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         comments:
                           type: array
                           description: ''
@@ -8053,7 +8055,7 @@ paths:
                                     type: string
                                     description: ''
                                     example: Pe
-                                required: []
+                                
                               comment:
                                 type: string
                                 description: ''
@@ -8066,7 +8068,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-01-22T04:03:11'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -8075,7 +8077,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-01-22T04:02:03'
-                      required: []
+                      
                   documents:
                     type: array
                     description: ''
@@ -8142,7 +8144,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -8151,7 +8153,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-02-24T07:20:05'
-                      required: []
+                      
                   staffAssigned:
                     type: array
                     description: ''
@@ -8184,8 +8186,8 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
-                      required: []
+                          
+                      
                   phases:
                     type: array
                     description: ''
@@ -8223,7 +8225,7 @@ paths:
                           type: string
                           description: ''
                           example: '2024-11-26T05:11:11'
-                      required: []
+                      
                   milestones:
                     type: array
                     description: ''
@@ -8281,8 +8283,8 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
-                      required: []
+                          
+                      
                   quotes:
                     type: array
                     description: ''
@@ -8351,7 +8353,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         budget:
                           type: number
                           description: ''
@@ -8372,7 +8374,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T01:31:26'
-                      required: []
+                      
                   invoices:
                     type: array
                     description: ''
@@ -8450,7 +8452,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-02-19T05:02:06'
-                      required: []
+                      
                   purchaseOrders:
                     type: array
                     description: ''
@@ -8489,13 +8491,13 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         billingStatus:
                           type: object
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         amountExTax:
                           type: number
                           description: ''
@@ -8512,7 +8514,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T17:42:20'
-                      required: []
+                      
                   timesheets:
                     type: array
                     description: ''
@@ -8570,7 +8572,7 @@ paths:
                               type: string
                               description: ''
                               example: User
-                          required: []
+                          
                         date:
                           type: string
                           description: ''
@@ -8584,7 +8586,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         billable:
                           type: boolean
                           description: ''
@@ -8617,7 +8619,7 @@ paths:
                                 type: boolean
                                 description: ''
                                 example: true
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -8626,7 +8628,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-02T08:08:44'
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -8713,7 +8715,7 @@ paths:
                         type: string
                         description: ''
                         example: johndoe@example.com
-                    required: []
+                    
                   contact:
                     type: object
                     description: ''
@@ -8749,7 +8751,7 @@ paths:
                         type: string
                         description: ''
                         example: gragefoo@gmail.com
-                    required: []
+                    
                   clientContactUUID:
                     type: string
                     description: ''
@@ -8781,7 +8783,7 @@ paths:
                         type: string
                         description: ''
                         example: In Progress
-                    required: []
+                    
                   jobCategory:
                     type: object
                     description: ''
@@ -8797,7 +8799,7 @@ paths:
                         type: string
                         description: ''
                         example: job category 1
-                    required: []
+                    
                   priority:
                     type: boolean
                     description: ''
@@ -8838,7 +8840,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   jobManager:
                     type: object
                     description: ''
@@ -8859,7 +8861,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   startDate:
                     type: string
                     description: ''
@@ -8906,7 +8908,7 @@ paths:
                           type: string
                           description: ''
                           example: ''
-                      required: []
+                      
                   tasks:
                     type: array
                     description: ''
@@ -9032,7 +9034,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 900
-                            required: []
+                            
                         customFields:
                           type: array
                           description: ''
@@ -9067,7 +9069,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: ''
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -9076,7 +9078,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T01:31:27'
-                      required: []
+                      
                   costs:
                     type: array
                     description: ''
@@ -9147,7 +9149,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         type:
                           type: string
                           description: ''
@@ -9183,7 +9185,7 @@ paths:
                               type: string
                               description: ''
                               example: supplier 1
-                          required: []
+                          
                         phaseUUID:
                           type: string
                           description: ''
@@ -9222,7 +9224,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: ''
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -9231,7 +9233,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T05:16:55'
-                      required: []
+                      
                   notes:
                     type: array
                     description: ''
@@ -9298,7 +9300,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         comments:
                           type: array
                           description: ''
@@ -9333,7 +9335,7 @@ paths:
                                     type: string
                                     description: ''
                                     example: Pe
-                                required: []
+                                
                               comment:
                                 type: string
                                 description: ''
@@ -9346,7 +9348,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-01-22T04:03:11'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -9355,7 +9357,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-01-22T04:02:03'
-                      required: []
+                      
                   documents:
                     type: array
                     description: ''
@@ -9422,7 +9424,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -9431,7 +9433,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-02-24T07:20:05'
-                      required: []
+                      
                   staffAssigned:
                     type: array
                     description: ''
@@ -9464,8 +9466,8 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
-                      required: []
+                          
+                      
                   phases:
                     type: array
                     description: ''
@@ -9503,7 +9505,7 @@ paths:
                           type: string
                           description: ''
                           example: '2024-11-26T05:11:11'
-                      required: []
+                      
                   milestones:
                     type: array
                     description: ''
@@ -9561,8 +9563,8 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
-                      required: []
+                          
+                      
                   quotes:
                     type: array
                     description: ''
@@ -9631,7 +9633,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         budget:
                           type: number
                           description: ''
@@ -9652,7 +9654,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T01:31:26'
-                      required: []
+                      
                   invoices:
                     type: array
                     description: ''
@@ -9730,7 +9732,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-02-19T05:02:06'
-                      required: []
+                      
                   purchaseOrders:
                     type: array
                     description: ''
@@ -9769,13 +9771,13 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         billingStatus:
                           type: object
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         amountExTax:
                           type: number
                           description: ''
@@ -9792,7 +9794,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T17:42:20'
-                      required: []
+                      
                   timesheets:
                     type: array
                     description: ''
@@ -9850,7 +9852,7 @@ paths:
                               type: string
                               description: ''
                               example: User
-                          required: []
+                          
                         date:
                           type: string
                           description: ''
@@ -9864,7 +9866,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         billable:
                           type: boolean
                           description: ''
@@ -9897,7 +9899,7 @@ paths:
                                 type: boolean
                                 description: ''
                                 example: true
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -9906,7 +9908,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-02T08:08:44'
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -9996,7 +9998,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - name
     delete:
@@ -10245,7 +10247,7 @@ paths:
                               type: string
                               description: ''
                               example: Developer
-                          required: []
+                          
                         jobTask:
                           type: object
                           description: ''
@@ -10266,7 +10268,7 @@ paths:
                               type: string
                               description: ''
                               example: Task 1 label
-                          required: []
+                          
                         staff:
                           type: object
                           description: ''
@@ -10287,7 +10289,7 @@ paths:
                               type: string
                               description: ''
                               example: User
-                          required: []
+                          
                         time:
                           type: number
                           description: ''
@@ -10391,8 +10393,8 @@ paths:
                                   type: number
                                   description: ''
                                   example: 0
-                              required: []
-                          required: []
+                              
+                          
                         customFields:
                           type: array
                           description: ''
@@ -10421,7 +10423,7 @@ paths:
                                 type: boolean
                                 description: ''
                                 example: false
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -10430,7 +10432,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-05T17:02:14'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -10495,7 +10497,7 @@ paths:
                           type: string
                           description: ''
                           example: '2024-11-26T01:58:47'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -10685,7 +10687,7 @@ paths:
                           type: string
                           description: ''
                           example: '2024-11-05T04:01:15'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -10859,7 +10861,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         quantity:
                           type: number
                           description: ''
@@ -10903,7 +10905,7 @@ paths:
                               type: string
                               description: ''
                               example: supplier 1
-                          required: []
+                          
                         phase:
                           type: object
                           description: ''
@@ -10919,7 +10921,7 @@ paths:
                               type: string
                               description: ''
                               example: Phase 1
-                          required: []
+                          
                         customFields:
                           type: array
                           description: ''
@@ -10954,7 +10956,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: asd
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -10963,7 +10965,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-02-19T02:24:56'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -11077,7 +11079,7 @@ paths:
                         type: string
                         description: ''
                         example: kamisato ayato
-                    required: []
+                    
                   phase:
                     type: object
                     description: ''
@@ -11093,7 +11095,7 @@ paths:
                         type: string
                         description: ''
                         example: Phase1
-                    required: []
+                    
                   customFields:
                     type: array
                     description: ''
@@ -11125,7 +11127,7 @@ paths:
                           type: boolean
                           description: ''
                           example: false
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -11202,7 +11204,7 @@ paths:
                   items:
                     type: object
                     properties: {}
-                    required: []
+                    
                 customFields:
                   type: array
                   description: List of custom fields with values.
@@ -11220,7 +11222,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - customfields
   /v2/jobs/{jobUUID}/costs/{UUID}:
@@ -11342,7 +11344,7 @@ paths:
                         type: string
                         description: ''
                         example: kamisato ayato
-                    required: []
+                    
                   phase:
                     type: object
                     description: ''
@@ -11358,7 +11360,7 @@ paths:
                         type: string
                         description: ''
                         example: Phase1
-                    required: []
+                    
                   customFields:
                     type: array
                     description: ''
@@ -11390,7 +11392,7 @@ paths:
                           type: boolean
                           description: ''
                           example: false
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -11463,7 +11465,7 @@ paths:
                   items:
                     type: object
                     properties: {}
-                    required: []
+                    
                 customFields:
                   type: array
                   description: List of custom fields with values.
@@ -11481,7 +11483,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - customfields
   /v2/jobs/{jobUUID}/documents:
@@ -11585,7 +11587,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-02-24T07:18:04'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -12057,7 +12059,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         budget:
                           type: number
                           description: ''
@@ -12083,7 +12085,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         dateCreatedUtc:
                           type: string
                           description: ''
@@ -12107,7 +12109,7 @@ paths:
                               type: string
                               description: ''
                               example: John Ultra
-                          required: []
+                          
                         contact:
                           type: object
                           description: ''
@@ -12123,7 +12125,7 @@ paths:
                               type: string
                               description: ''
                               example: Grace Foo
-                          required: []
+                          
                         manager:
                           type: object
                           description: ''
@@ -12139,7 +12141,7 @@ paths:
                               type: string
                               description: ''
                               example: Demo User
-                          required: []
+                          
                         partner:
                           type: object
                           description: ''
@@ -12155,7 +12157,7 @@ paths:
                               type: string
                               description: ''
                               example: Demo User
-                          required: []
+                          
                         assigned:
                           type: array
                           description: ''
@@ -12173,7 +12175,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: Eduard Peran
-                            required: []
+                            
                         tasks:
                           type: array
                           description: ''
@@ -12252,8 +12254,8 @@ paths:
                                       type: number
                                       description: ''
                                       example: 960
-                                  required: []
-                            required: []
+                                  
+                            
                         milestones:
                           type: array
                           description: ''
@@ -12301,7 +12303,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: ''
-                            required: []
+                            
                         notes:
                           type: array
                           description: ''
@@ -12363,13 +12365,13 @@ paths:
                                 description: ''
                                 example: []
                                 items: {}
-                            required: []
+                            
                         webURL:
                           type: string
                           description: ''
                           example: >-
                             http://app.localhost/organizations/9d69d863-d43d-4b66-ba9f-7579963745a4/jobs/4634bc8a-fdec-4c1b-87a0-955615cd1871/information
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -12477,7 +12479,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - estimatedMinutes
                 - taskUUID
@@ -12590,7 +12592,7 @@ paths:
                           type: number
                           description: ''
                           example: 960
-                      required: []
+                      
                   customFields:
                     type: array
                     description: ''
@@ -12622,7 +12624,7 @@ paths:
                           type: boolean
                           description: ''
                           example: false
-                      required: []
+                      
       requestBody:
         description: Request body
         required: true
@@ -12680,7 +12682,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - estimatedMinutes
                 - taskUUID
@@ -12819,7 +12821,7 @@ paths:
                         type: string
                         description: ''
                         example: johndoe@example.com
-                    required: []
+                    
                   contact:
                     type: object
                     description: ''
@@ -12855,7 +12857,7 @@ paths:
                         type: string
                         description: ''
                         example: gragefoo@gmail.com
-                    required: []
+                    
                   clientContactUUID:
                     type: string
                     description: ''
@@ -12887,7 +12889,7 @@ paths:
                         type: string
                         description: ''
                         example: In Progress
-                    required: []
+                    
                   jobCategory:
                     type: object
                     description: ''
@@ -12903,7 +12905,7 @@ paths:
                         type: string
                         description: ''
                         example: job category 1
-                    required: []
+                    
                   priority:
                     type: boolean
                     description: ''
@@ -12944,7 +12946,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   jobManager:
                     type: object
                     description: ''
@@ -12965,7 +12967,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   startDate:
                     type: string
                     description: ''
@@ -13012,7 +13014,7 @@ paths:
                           type: string
                           description: ''
                           example: ''
-                      required: []
+                      
                   tasks:
                     type: array
                     description: ''
@@ -13138,7 +13140,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 900
-                            required: []
+                            
                         customFields:
                           type: array
                           description: ''
@@ -13173,7 +13175,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: ''
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -13182,7 +13184,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T01:31:27'
-                      required: []
+                      
                   costs:
                     type: array
                     description: ''
@@ -13253,7 +13255,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         type:
                           type: string
                           description: ''
@@ -13289,7 +13291,7 @@ paths:
                               type: string
                               description: ''
                               example: supplier 1
-                          required: []
+                          
                         phaseUUID:
                           type: string
                           description: ''
@@ -13328,7 +13330,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: ''
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -13337,7 +13339,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T05:16:55'
-                      required: []
+                      
                   notes:
                     type: array
                     description: ''
@@ -13404,7 +13406,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         comments:
                           type: array
                           description: ''
@@ -13439,7 +13441,7 @@ paths:
                                     type: string
                                     description: ''
                                     example: Pe
-                                required: []
+                                
                               comment:
                                 type: string
                                 description: ''
@@ -13452,7 +13454,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-01-22T04:03:11'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -13461,7 +13463,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-01-22T04:02:03'
-                      required: []
+                      
                   documents:
                     type: array
                     description: ''
@@ -13528,7 +13530,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -13537,7 +13539,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-02-24T07:20:05'
-                      required: []
+                      
                   staffAssigned:
                     type: array
                     description: ''
@@ -13570,8 +13572,8 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
-                      required: []
+                          
+                      
                   phases:
                     type: array
                     description: ''
@@ -13609,7 +13611,7 @@ paths:
                           type: string
                           description: ''
                           example: '2024-11-26T05:11:11'
-                      required: []
+                      
                   milestones:
                     type: array
                     description: ''
@@ -13667,8 +13669,8 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
-                      required: []
+                          
+                      
                   quotes:
                     type: array
                     description: ''
@@ -13737,7 +13739,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         budget:
                           type: number
                           description: ''
@@ -13758,7 +13760,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T01:31:26'
-                      required: []
+                      
                   invoices:
                     type: array
                     description: ''
@@ -13836,7 +13838,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-02-19T05:02:06'
-                      required: []
+                      
                   purchaseOrders:
                     type: array
                     description: ''
@@ -13875,13 +13877,13 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         billingStatus:
                           type: object
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         amountExTax:
                           type: number
                           description: ''
@@ -13898,7 +13900,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T17:42:20'
-                      required: []
+                      
                   timesheets:
                     type: array
                     description: ''
@@ -13956,7 +13958,7 @@ paths:
                               type: string
                               description: ''
                               example: User
-                          required: []
+                          
                         date:
                           type: string
                           description: ''
@@ -13970,7 +13972,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         billable:
                           type: boolean
                           description: ''
@@ -14003,7 +14005,7 @@ paths:
                                 type: boolean
                                 description: ''
                                 example: true
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -14012,7 +14014,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-02T08:08:44'
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -14207,8 +14209,8 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
-                            required: []
+                                
+                            
                         category:
                           type: string
                           description: ''
@@ -14228,7 +14230,7 @@ paths:
                               type: string
                               description: ''
                               example: Test Client
-                          required: []
+                          
                         contact:
                           type: object
                           description: ''
@@ -14244,7 +14246,7 @@ paths:
                               type: string
                               description: ''
                               example: John Smith Test
-                          required: []
+                          
                         histories:
                           type: array
                           description: ''
@@ -14280,8 +14282,8 @@ paths:
                                 type: number
                                 description: ''
                                 example: 2
-                            required: []
-                      required: []
+                            
+                      
                   total:
                     type: integer
                     description: ''
@@ -14370,7 +14372,7 @@ paths:
                   items:
                     type: object
                     properties: {}
-                    required: []
+                    
               required:
                 - clientUUID
                 - name
@@ -14476,8 +14478,8 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
-                      required: []
+                          
+                      
                   category:
                     type: string
                     description: ''
@@ -14497,7 +14499,7 @@ paths:
                         type: string
                         description: ''
                         example: Test Client
-                    required: []
+                    
                   contact:
                     type: object
                     description: ''
@@ -14513,7 +14515,7 @@ paths:
                         type: string
                         description: ''
                         example: John Smith
-                    required: []
+                    
                   histories:
                     type: array
                     description: ''
@@ -14545,7 +14547,7 @@ paths:
                           type: number
                           description: ''
                           example: 4
-                      required: []
+                      
                   customFields:
                     type: array
                     description: ''
@@ -14568,7 +14570,7 @@ paths:
                           type: number
                           description: ''
                           example: 1233
-                      required: []
+                      
   /v2/lead-categories:
     get:
       tags:
@@ -14684,8 +14686,8 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
-                      required: []
+                          
+                      
                   total:
                     type: integer
                     description: ''
@@ -14791,7 +14793,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-03-31T06:49:18'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -15269,7 +15271,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: J000039
-                            required: []
+                            
                         purchaseOrderNumber:
                           type: string
                           description: ''
@@ -15291,13 +15293,13 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         deliveryAddress:
                           type: object
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         date:
                           type: string
                           description: ''
@@ -15351,7 +15353,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               costUUID:
                                 type: string
                                 description: ''
@@ -15373,7 +15375,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               quantity:
                                 type: number
                                 description: ''
@@ -15401,7 +15403,7 @@ paths:
                                       type: number
                                       description: ''
                                       example: 15
-                                  required: []
+                                  
                               createdAt:
                                 type: string
                                 description: ''
@@ -15410,7 +15412,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-27T14:59:47'
-                            required: []
+                            
                         stockReceipts:
                           type: array
                           description: ''
@@ -15470,7 +15472,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               stockReceiptID:
                                 type: string
                                 description: ''
@@ -15492,7 +15494,7 @@ paths:
                                       type: number
                                       description: ''
                                       example: 10
-                                  required: []
+                                  
                               supplierBillNumber:
                                 type: string
                                 description: ''
@@ -15517,7 +15519,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-28T02:09:03'
-                            required: []
+                            
                         bills:
                           type: array
                           description: ''
@@ -15597,7 +15599,7 @@ paths:
                                       type: number
                                       description: ''
                                       example: 10
-                                  required: []
+                                  
                               stockReceiptID:
                                 type: string
                                 description: ''
@@ -15622,7 +15624,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-28T02:09:03'
-                            required: []
+                            
                         notes:
                           type: array
                           description: ''
@@ -15670,7 +15672,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-06-09T07:05:02'
-                            required: []
+                            
                         documents:
                           type: array
                           description: ''
@@ -15730,7 +15732,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-06-09T07:07:57'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -15739,7 +15741,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-28T02:09:03'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -15806,7 +15808,7 @@ paths:
                         type: string
                         description: ''
                         example: ed.peran@workflowmax.com
-                    required: []
+                    
                   jobs:
                     type: array
                     description: ''
@@ -15824,7 +15826,7 @@ paths:
                           type: string
                           description: ''
                           example: J000039
-                      required: []
+                      
                   purchaseOrderNumber:
                     type: string
                     description: ''
@@ -15926,7 +15928,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         type:
                           type: string
                           description: ''
@@ -15940,13 +15942,13 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         notes:
                           type: object
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         quantity:
                           type: number
                           description: ''
@@ -15972,7 +15974,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 10
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -15981,7 +15983,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-06-17T02:35:01'
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -16104,9 +16106,9 @@ paths:
                                     type: string
                                     description: ''
                                     example: tax-uuid-1
-                                required: []
-                          required: []
-                    required: []
+                                
+                          
+                    
               required:
                 - jobs
   /v2/purchase-orders/{UUID}:
@@ -16196,7 +16198,7 @@ paths:
                         type: string
                         description: ''
                         example: ed.peran@workflowmax.com
-                    required: []
+                    
                   jobs:
                     type: array
                     description: ''
@@ -16214,7 +16216,7 @@ paths:
                           type: string
                           description: ''
                           example: J000039
-                      required: []
+                      
                   purchaseOrderNumber:
                     type: string
                     description: ''
@@ -16292,7 +16294,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         costUUID:
                           type: string
                           description: ''
@@ -16314,7 +16316,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         quantity:
                           type: number
                           description: ''
@@ -16342,7 +16344,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 15
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -16351,7 +16353,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-27T14:59:47'
-                      required: []
+                      
                   stockReceipts:
                     type: array
                     description: ''
@@ -16471,7 +16473,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         stockReceiptID:
                           type: string
                           description: ''
@@ -16493,7 +16495,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 10
-                            required: []
+                            
                         supplierBillNumber:
                           type: string
                           description: ''
@@ -16594,8 +16596,8 @@ paths:
                                       description: ''
                                       example: {}
                                       properties: {}
-                                      required: []
-                                  required: []
+                                      
+                                  
                               createdAt:
                                 type: string
                                 description: ''
@@ -16604,7 +16606,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-28T01:21:56'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -16613,7 +16615,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-28T02:09:03'
-                      required: []
+                      
                   bills:
                     type: array
                     description: ''
@@ -16753,7 +16755,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 10
-                            required: []
+                            
                         stockReceiptID:
                           type: string
                           description: ''
@@ -16854,8 +16856,8 @@ paths:
                                       description: ''
                                       example: {}
                                       properties: {}
-                                      required: []
-                                  required: []
+                                      
+                                  
                               createdAt:
                                 type: string
                                 description: ''
@@ -16864,7 +16866,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-28T01:21:56'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -16873,7 +16875,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-28T02:09:03'
-                      required: []
+                      
                   notes:
                     type: array
                     description: ''
@@ -16947,7 +16949,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         comments:
                           type: array
                           description: ''
@@ -16989,7 +16991,7 @@ paths:
                                     type: string
                                     description: ''
                                     example: Pe
-                                required: []
+                                
                               comment:
                                 type: string
                                 description: ''
@@ -17002,7 +17004,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-06-09T09:55:24'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -17011,7 +17013,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-06-09T07:05:02'
-                      required: []
+                      
                   documents:
                     type: array
                     description: ''
@@ -17082,7 +17084,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -17091,7 +17093,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-06-09T07:07:57'
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -17371,7 +17373,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 10
-                            required: []
+                            
                         amountExTax:
                           type: number
                           description: ''
@@ -17439,7 +17441,7 @@ paths:
                                       type: number
                                       description: ''
                                       example: 10
-                                  required: []
+                                  
                               createdAt:
                                 type: string
                                 description: ''
@@ -17448,7 +17450,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-27T15:00:24'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -17457,7 +17459,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-28T01:19:14'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -17592,7 +17594,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-15T02:06:45'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -17987,7 +17989,7 @@ paths:
                                       type: number
                                       description: ''
                                       example: 10
-                                  required: []
+                                  
                               createdAt:
                                 type: string
                                 description: ''
@@ -17996,7 +17998,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-06-18T02:32:18'
-                            required: []
+                            
                         supplierBillNumber:
                           type: string
                           description: ''
@@ -18026,7 +18028,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 10
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -18035,7 +18037,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-06-18T02:34:43'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -18671,7 +18673,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         job:
                           type: object
                           description: ''
@@ -18687,7 +18689,7 @@ paths:
                               type: string
                               description: ''
                               example: J000003
-                          required: []
+                          
                         jobMasterQuote:
                           type: boolean
                           description: ''
@@ -18705,7 +18707,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         validFrom:
                           type: string
                           description: ''
@@ -18819,7 +18821,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               order:
                                 type: number
                                 description: ''
@@ -18832,7 +18834,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-04-10T17:42:02'
-                            required: []
+                            
                         notes:
                           type: array
                           description: ''
@@ -18880,7 +18882,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-23T02:12:42'
-                            required: []
+                            
                         documents:
                           type: array
                           description: ''
@@ -18940,7 +18942,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-23T02:13:30'
-                            required: []
+                            
                         tasks:
                           type: array
                           description: ''
@@ -19047,7 +19049,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               name:
                                 type: string
                                 description: ''
@@ -19073,7 +19075,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               time:
                                 type: number
                                 description: ''
@@ -19119,13 +19121,13 @@ paths:
                                       type: number
                                       description: ''
                                       example: 10
-                                  required: []
+                                  
                               order:
                                 type: object
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               createdAt:
                                 type: string
                                 description: ''
@@ -19177,8 +19179,8 @@ paths:
                                       type: number
                                       description: ''
                                       example: 0
-                                  required: []
-                            required: []
+                                  
+                            
                         costs:
                           type: array
                           description: ''
@@ -19245,7 +19247,7 @@ paths:
                                 description: ''
                                 example: {}
                                 properties: {}
-                                required: []
+                                
                               quotePhaseUUID:
                                 type: string
                                 description: ''
@@ -19319,7 +19321,7 @@ paths:
                                       type: number
                                       description: ''
                                       example: 10
-                                  required: []
+                                  
                               order:
                                 type: number
                                 description: ''
@@ -19332,7 +19334,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-23T02:06:01'
-                            required: []
+                            
                         customFields:
                           type: array
                           description: ''
@@ -19373,7 +19375,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-02'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -19382,7 +19384,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-23T02:06:01'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -19481,7 +19483,7 @@ paths:
                         type: string
                         description: ''
                         example: johndoe@example.com
-                    required: []
+                    
                   contact:
                     type: object
                     description: ''
@@ -19517,7 +19519,7 @@ paths:
                         type: string
                         description: ''
                         example: gragefoo@gmail.com
-                    required: []
+                    
                   salesperson:
                     type: object
                     description: ''
@@ -19538,7 +19540,7 @@ paths:
                         type: string
                         description: ''
                         example: Peran
-                    required: []
+                    
                   lead:
                     type: string
                     description: ''
@@ -19558,7 +19560,7 @@ paths:
                         type: string
                         description: ''
                         example: J000003
-                    required: []
+                    
                   type:
                     type: string
                     description: ''
@@ -19684,7 +19686,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         order:
                           type: number
                           description: ''
@@ -19697,7 +19699,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-10T17:42:02'
-                      required: []
+                      
                   notes:
                     type: array
                     description: ''
@@ -19771,7 +19773,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         comments:
                           type: array
                           description: ''
@@ -19813,7 +19815,7 @@ paths:
                                     type: string
                                     description: ''
                                     example: Pe
-                                required: []
+                                
                               comment:
                                 type: string
                                 description: ''
@@ -19826,7 +19828,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-05-23T02:12:57'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -19835,7 +19837,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-23T02:12:42'
-                      required: []
+                      
                   documents:
                     type: array
                     description: ''
@@ -19906,7 +19908,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -19915,7 +19917,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-23T02:13:30'
-                      required: []
+                      
                   tasks:
                     type: array
                     description: ''
@@ -20022,7 +20024,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         name:
                           type: string
                           description: ''
@@ -20048,7 +20050,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         time:
                           type: number
                           description: ''
@@ -20094,13 +20096,13 @@ paths:
                                 type: number
                                 description: ''
                                 example: 10
-                            required: []
+                            
                         order:
                           type: object
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -20152,8 +20154,8 @@ paths:
                                 type: number
                                 description: ''
                                 example: 0
-                            required: []
-                      required: []
+                            
+                      
                   costs:
                     type: array
                     description: ''
@@ -20292,7 +20294,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 10
-                            required: []
+                            
                         order:
                           type: number
                           description: ''
@@ -20305,7 +20307,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-23T02:06:01'
-                      required: []
+                      
                   customFields:
                     type: array
                     description: ''
@@ -20346,7 +20348,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-02'
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -20456,7 +20458,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-02T01:14:48'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -20839,7 +20841,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         contactDetails:
                           type: object
                           description: ''
@@ -20865,7 +20867,7 @@ paths:
                               type: string
                               description: ''
                               example: 123 bulag street hindi matagpuan city
-                          required: []
+                          
                         customTaskRates:
                           type: array
                           description: ''
@@ -20888,7 +20890,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 30
-                            required: []
+                            
                         historicRates:
                           type: array
                           description: ''
@@ -20907,8 +20909,8 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
-                      required: []
+                          
+                      
                   total:
                     type: integer
                     description: ''
@@ -21121,7 +21123,7 @@ paths:
                         type: string
                         description: ''
                         example: 123 street new city
-                    required: []
+                    
                   customTaskRates:
                     type: array
                     description: ''
@@ -21147,7 +21149,7 @@ paths:
                           type: number
                           description: ''
                           example: 199
-                      required: []
+                      
                   historicRates:
                     type: array
                     description: ''
@@ -21165,7 +21167,7 @@ paths:
                           type: number
                           description: ''
                           example: 100
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -21293,7 +21295,7 @@ paths:
                         type: string
                         description: ''
                         example: 123 street new city
-                    required: []
+                    
                   customTaskRates:
                     type: array
                     description: ''
@@ -21319,7 +21321,7 @@ paths:
                           type: number
                           description: ''
                           example: 199
-                      required: []
+                      
                   historicRates:
                     type: array
                     description: ''
@@ -21337,7 +21339,7 @@ paths:
                           type: number
                           description: ''
                           example: 100
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -21700,7 +21702,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: Philippines
-                            required: []
+                            
                         contacts:
                           type: array
                           description: ''
@@ -21753,7 +21755,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-06-02T08:27:29'
-                            required: []
+                            
                         contactDetails:
                           type: object
                           description: ''
@@ -21779,7 +21781,7 @@ paths:
                               type: string
                               description: ''
                               example: www.web.com
-                          required: []
+                          
                         notes:
                           type: array
                           description: ''
@@ -21822,7 +21824,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-06-02T07:24:16'
-                            required: []
+                            
                         documents:
                           type: array
                           description: ''
@@ -21893,7 +21895,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-04-11T01:24:01'
-                            required: []
+                            
                         customFields:
                           type: array
                           description: ''
@@ -21925,7 +21927,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: text
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -21938,7 +21940,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-06-02T08:27:41'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -22103,7 +22105,7 @@ paths:
                   items:
                     type: object
                     properties: {}
-                    required: []
+                    
               required:
                 - name
                 - customFields
@@ -22241,7 +22243,7 @@ paths:
                           type: string
                           description: ''
                           example: Philippines
-                      required: []
+                      
                   contacts:
                     type: array
                     description: ''
@@ -22294,7 +22296,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-06-02T08:27:29'
-                      required: []
+                      
                   contactDetails:
                     type: object
                     description: ''
@@ -22320,7 +22322,7 @@ paths:
                         type: string
                         description: ''
                         example: www.web.com
-                    required: []
+                    
                   notes:
                     type: array
                     description: ''
@@ -22382,7 +22384,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         comments:
                           type: array
                           description: ''
@@ -22417,7 +22419,7 @@ paths:
                                     type: string
                                     description: ''
                                     example: Pe
-                                required: []
+                                
                               comment:
                                 type: string
                                 description: ''
@@ -22430,7 +22432,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-06-02T07:24:25'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -22439,7 +22441,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-06-02T07:24:16'
-                      required: []
+                      
                   documents:
                     type: array
                     description: ''
@@ -22524,7 +22526,7 @@ paths:
                               type: string
                               description: ''
                               example: User
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -22533,7 +22535,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-11T01:24:01'
-                      required: []
+                      
                   customFields:
                     type: array
                     description: ''
@@ -22565,7 +22567,7 @@ paths:
                           type: string
                           description: ''
                           example: text
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -22694,7 +22696,7 @@ paths:
                           type: string
                           description: ''
                           example: Philippines
-                      required: []
+                      
                   contacts:
                     type: array
                     description: ''
@@ -22747,7 +22749,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-06-02T08:27:29'
-                      required: []
+                      
                   contactDetails:
                     type: object
                     description: ''
@@ -22773,7 +22775,7 @@ paths:
                         type: string
                         description: ''
                         example: www.web.com
-                    required: []
+                    
                   notes:
                     type: array
                     description: ''
@@ -22835,7 +22837,7 @@ paths:
                               type: string
                               description: ''
                               example: Pe
-                          required: []
+                          
                         comments:
                           type: array
                           description: ''
@@ -22870,7 +22872,7 @@ paths:
                                     type: string
                                     description: ''
                                     example: Pe
-                                required: []
+                                
                               comment:
                                 type: string
                                 description: ''
@@ -22883,7 +22885,7 @@ paths:
                                 type: string
                                 description: ''
                                 example: '2025-06-02T07:24:25'
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -22892,7 +22894,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-06-02T07:24:16'
-                      required: []
+                      
                   documents:
                     type: array
                     description: ''
@@ -22977,7 +22979,7 @@ paths:
                               type: string
                               description: ''
                               example: User
-                          required: []
+                          
                         createdAt:
                           type: string
                           description: ''
@@ -22986,7 +22988,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-04-11T01:24:01'
-                      required: []
+                      
                   customFields:
                     type: array
                     description: ''
@@ -23018,7 +23020,7 @@ paths:
                           type: string
                           description: ''
                           example: text
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -23155,7 +23157,7 @@ paths:
                   items:
                     type: object
                     properties: {}
-                    required: []
+                    
               required:
                 - name
                 - customFields
@@ -23279,7 +23281,7 @@ paths:
                         type: string
                         description: ''
                         example: kamisato ayato
-                    required: []
+                    
                   firstName:
                     type: string
                     description: ''
@@ -23326,7 +23328,7 @@ paths:
                           type: string
                           description: ''
                           example: text
-                      required: []
+                      
                   createdAt:
                     type: string
                     description: ''
@@ -23429,7 +23431,7 @@ paths:
                   items:
                     type: object
                     properties: {}
-                    required: []
+                    
               required:
                 - name
                 - customFields
@@ -23547,7 +23549,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         createdBy:
                           type: string
                           description: ''
@@ -23565,7 +23567,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-03-18T03:23:06'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -23995,7 +23997,7 @@ paths:
                           description: ''
                           example: {}
                           properties: {}
-                          required: []
+                          
                         salesTax:
                           type: array
                           description: ''
@@ -24013,7 +24015,7 @@ paths:
                                 type: number
                                 description: ''
                                 example: 15
-                            required: []
+                            
                         customClientRates:
                           type: array
                           description: ''
@@ -24045,7 +24047,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-02-11T03:53:26'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -24203,7 +24205,7 @@ paths:
                           type: number
                           description: ''
                           example: 15
-                      required: []
+                      
                   customClientRates:
                     type: array
                     description: ''
@@ -24225,7 +24227,7 @@ paths:
                           type: number
                           description: ''
                           example: 1
-                      required: []
+                      
                   customStaffRates:
                     type: array
                     description: ''
@@ -24254,7 +24256,7 @@ paths:
                           type: number
                           description: ''
                           example: 30
-                      required: []
+                      
                   historicRates:
                     type: array
                     description: ''
@@ -24272,7 +24274,7 @@ paths:
                           type: number
                           description: ''
                           example: 3
-                      required: []
+                      
                   incomeAccount:
                     type: string
                     description: ''
@@ -24373,7 +24375,7 @@ paths:
                           type: number
                           description: ''
                           example: 15
-                      required: []
+                      
                   customClientRates:
                     type: array
                     description: ''
@@ -24395,7 +24397,7 @@ paths:
                           type: number
                           description: ''
                           example: 1
-                      required: []
+                      
                   customStaffRates:
                     type: array
                     description: ''
@@ -24424,7 +24426,7 @@ paths:
                           type: number
                           description: ''
                           example: 30
-                      required: []
+                      
                   historicRates:
                     type: array
                     description: ''
@@ -24442,7 +24444,7 @@ paths:
                           type: number
                           description: ''
                           example: 3
-                      required: []
+                      
                   incomeAccount:
                     type: string
                     description: ''
@@ -24774,7 +24776,7 @@ paths:
                               type: string
                               description: ''
                               example: Developer
-                          required: []
+                          
                         jobTask:
                           type: object
                           description: ''
@@ -24795,7 +24797,7 @@ paths:
                               type: string
                               description: ''
                               example: Task 1 label
-                          required: []
+                          
                         staff:
                           type: object
                           description: ''
@@ -24816,7 +24818,7 @@ paths:
                               type: string
                               description: ''
                               example: User
-                          required: []
+                          
                         time:
                           type: number
                           description: ''
@@ -24920,8 +24922,8 @@ paths:
                                   type: number
                                   description: ''
                                   example: 0
-                              required: []
-                          required: []
+                              
+                          
                         customFields:
                           type: array
                           description: ''
@@ -24950,7 +24952,7 @@ paths:
                                 type: boolean
                                 description: ''
                                 example: false
-                            required: []
+                            
                         createdAt:
                           type: string
                           description: ''
@@ -24959,7 +24961,7 @@ paths:
                           type: string
                           description: ''
                           example: '2025-05-05T17:02:14'
-                      required: []
+                      
                   total:
                     type: integer
                     description: ''
@@ -25021,7 +25023,7 @@ paths:
                         type: string
                         description: ''
                         example: Marine
-                    required: []
+                    
                   jobTask:
                     type: object
                     description: ''
@@ -25042,7 +25044,7 @@ paths:
                         type: string
                         description: ''
                         example: label 1
-                    required: []
+                    
                   staff:
                     type: object
                     description: ''
@@ -25063,7 +25065,7 @@ paths:
                         type: string
                         description: ''
                         example: Pe
-                    required: []
+                    
                   time:
                     type: integer
                     description: ''
@@ -25108,7 +25110,7 @@ paths:
                           type: boolean
                           description: ''
                           example: true
-                      required: []
+                      
       requestBody:
         description: Request body
         required: true
@@ -25157,7 +25159,7 @@ paths:
                   items:
                     type: object
                     properties: {}
-                    required: []
+                    
                 customFields:
                   type: array
                   description: List of custom fields with values.
@@ -25175,7 +25177,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - customfields
   /v2/timesheets/{UUID}:
@@ -25257,7 +25259,7 @@ paths:
                         type: string
                         description: ''
                         example: Developer
-                    required: []
+                    
                   jobTask:
                     type: object
                     description: ''
@@ -25278,7 +25280,7 @@ paths:
                         type: string
                         description: ''
                         example: Task 1 label
-                    required: []
+                    
                   staff:
                     type: object
                     description: ''
@@ -25299,7 +25301,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   time:
                     type: integer
                     description: ''
@@ -25348,7 +25350,7 @@ paths:
                           type: boolean
                           description: ''
                           example: false
-                      required: []
+                      
                   wip:
                     type: object
                     description: ''
@@ -25432,8 +25434,8 @@ paths:
                             type: integer
                             description: ''
                             example: 0
-                        required: []
-                    required: []
+                        
+                    
                   createdAt:
                     type: string
                     description: ''
@@ -25507,7 +25509,7 @@ paths:
                         type: string
                         description: ''
                         example: Developer
-                    required: []
+                    
                   jobTask:
                     type: object
                     description: ''
@@ -25528,7 +25530,7 @@ paths:
                         type: string
                         description: ''
                         example: Task 1 label
-                    required: []
+                    
                   staff:
                     type: object
                     description: ''
@@ -25549,7 +25551,7 @@ paths:
                         type: string
                         description: ''
                         example: User
-                    required: []
+                    
                   time:
                     type: integer
                     description: ''
@@ -25598,7 +25600,7 @@ paths:
                           type: boolean
                           description: ''
                           example: false
-                      required: []
+                      
                   wip:
                     type: object
                     description: ''
@@ -25682,8 +25684,8 @@ paths:
                             type: integer
                             description: ''
                             example: 0
-                        required: []
-                    required: []
+                        
+                    
                   createdAt:
                     type: string
                     description: ''
@@ -25740,7 +25742,7 @@ paths:
                   items:
                     type: object
                     properties: {}
-                    required: []
+                    
                 customFields:
                   type: array
                   description: List of custom fields with values.
@@ -25758,7 +25760,7 @@ paths:
                         type: string
                         description: ''
                         example: '123'
-                    required: []
+                    
               required:
                 - customfields
     delete:
