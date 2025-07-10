@@ -8,15 +8,13 @@ paths:
       tags:
         - Category
       summary: Get Job Categories
-      description: >-
+      description:
         The "Get Job Categories" section allows users to retrieve a list of job
         categories associated with a specific account. By accessing this
         information, users can efficiently organize and categorize different job
         types within their system. This API section enables users to streamline
         their workflow by providing essential information about job categories
         for effective management.
-
-
         This is newly added description for job categories
       operationId: Category_category/get-job-categories
       parameters:
