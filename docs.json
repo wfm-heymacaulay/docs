@@ -12,7 +12,6 @@
     "tabs": [
       {
         "tab": "Endpoints",
-        "openapi": "/api-reference/openapi2.yaml",
         "groups":[
           {"group": "Ahthorization",
           "pages":[
@@ -20,6 +19,7 @@
           ]
           },
           {"group": "Category",
+            "openapi": "/api-reference/openapi2.yaml",
           "pages":[
             "/api-reference/endpoint_test/Category/get-job-categories"
           ]
