@@ -12,26 +12,23 @@
     "tabs": [
       {
         "tab": "Endpoints",
-        "openapi": "api-reference/openapi-Jul8.yaml",
+        "openapi": "/api-reference/openapi-Jul8.yaml",
         "groups":[
           {"group": "Ahthorization",
           "pages":[
-            "api-reference/introduction"
+            "/api-reference/introduction"
           ]
           },
           {"group": "Category",
           "pages":[
-            "api-reference/endpoint_test/Category/get-job-categories"
+            "/api-reference/endpoint_test/Category/get-job-categories"
           ]
           }
         ]
       },
       {
         "tab": "API Reference - Full",
-        "openapi": {
-            "source": "/openapi2.yaml",
-            "directory": "api-reference"
-          }
+        "openapi": "/api-reference/openapi2.yaml"
       }
     ],
     "global": {
