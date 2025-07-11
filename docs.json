@@ -27,7 +27,7 @@
       },
       {
         "tab": "API Reference - Full",
-        "openapi": "/api-reference/openapi_spec_test.yaml"
+        "openapi": "/api-reference/endpoint_test/openapi2.yaml"
       }
     ],
     "global": {
