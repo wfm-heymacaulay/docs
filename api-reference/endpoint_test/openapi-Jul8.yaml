@@ -53,6 +53,7 @@ components:
         description:
           description: 'A brief description of the job category.'
           type: string
+          example: "This job category is type 1."
         incomeAccount:
           description: 'The income account associated with the job category.'
           type: string
