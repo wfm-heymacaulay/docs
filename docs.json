@@ -28,7 +28,10 @@
       },
       {
         "tab": "API Reference - Full",
-        "openapi": "api-reference/openapi2.yaml"
+        "openapi": {
+            "source": "/openapi2.yaml",
+            "directory": "api-reference"
+          }
       }
     ],
     "global": {
